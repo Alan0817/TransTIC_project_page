@@ -67,3 +67,6 @@ h2 {
   vertical-align: middle;
   float: none;
 }
+p {
+  text-align: justify;
+}
