@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TransTIC: Transferring Transformer-based Image Compression from Human Visualization to Machine Perception</title>
+  <title>TransTIC: Transferring Transformer-based Image Compression from Human Perception to Machine Perception</title>
   <script type="text/javascript" src="assets/latexit.js"></script>
   <script type="text/javascript">
     LatexIT.add('p', true);
@@ -95,7 +95,7 @@
       shown, the main autoencoder $g_a$, $g_s$ and the hyperprior autoencoder $h_a$, $h_s$ include Swin-Transformer blocks (STB)
       as the basic building blocks. These STB are interwoven
       with convolutional layers to adapt feature resolution in the
-      data pipeline. In this work, the main and hyperprior autoencoders are pre-trained for human visualization (i.e. the image reconstruction task) and their network weights are fixed
+      data pipeline. In this work, the main and hyperprior autoencoders are pre-trained for human perception (i.e. the image reconstruction task) and their network weights are fixed
       during the transferring process.
     </p>
     <p>
@@ -113,7 +113,7 @@
     <div class="container" id="paperdiv">
       <h2>Paper</h2>
       <a href="assets/paper.pdf"
-        download="TransTIC: Transferring Transformer-based Image Compression from Human Visualization to Machine Perception.pdf">
+        download="TransTIC: Transferring Transformer-based Image Compression from Human Perception to Machine Perception.pdf">
         <div class="thumbs">
       <img src="assets/thumbnails/paper-01.jpg" width="19%">
       <img src="assets/thumbnails/paper-02.jpg" width="19%">
@@ -168,10 +168,18 @@
       </p>
 
       <div id="exp2">
-        <div class="col-md-6 vcenter">
-          <p style="text-align:center;">
+        <div class="row">
+          <!-- <p style="text-align:center;">
             <a href="assets/results/rd2SOTA.png" data-lightbox="Exp2"><img
                 src="assets/results/rd2SOTA.png" width="1080"></a>
+          </p> -->
+          <p style="text-align:center;">
+            <a href="assets/results/rd2SOTA_detection.png" data-lightbox="Exp2"><img
+                src="assets/results/rd2SOTA_detection.png" width="480"></a>
+          <!-- </p> -->
+          <!-- <p style="text-align:center;"> -->
+            <a href="assets/results/rd2SOTA_segmentation.png" data-lightbox="Exp2"><img
+                src="assets/results/rd2SOTA_segmentation.png" width="480"></a>
           </p>
         </div>
       </div>
@@ -180,7 +188,7 @@
     <div class="container" id="Visualization">
       <h2>Qualitative Comparison</h2>
       <p>
-        Decoded images and the bit allocation maps produced by the competing methods. As shown, $TIC$, the codec optimized for human visualization,
+        Decoded images and the bit allocation maps produced by the competing methods. As shown, $TIC$, the codec optimized for human perception,
          tends to allocate more bits to complex regions, even if those regions are less relevant (e.g. background) to the downstream recognition tasks. 
          In contrast, the other methods, which target machine perception, attempt to shift coding bits from the background regions to the foreground objects.
       </p>
